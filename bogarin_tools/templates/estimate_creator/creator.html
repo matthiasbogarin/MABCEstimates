@@ -1,0 +1,111 @@
+{% extends 'estimate_creator/topnav.html' %}
+{% load static %}
+{% block widgets %}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<div id="main-content" class="file_manager">
+    <div class="container">       
+        <div class="row clearfix d-flex justify-content-start mt-3 mb-3">
+            <div>
+                <button type="button" class="btn btn-icon btn-primary" data-bs-toggle="modal" data-bs-target="#create_file_page">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>     
+        <div class="row clearfix">
+            {% for file in all_files %}
+                <div class="col-3 mb-3">
+                    <div class="card">
+                        <div class="row d-flex justify-content-between pt-1 pb-1 m-0">
+                            <div class="col-6 d-flex justify-content-start">
+                                <a  href="javascript:void(0);">
+                                    <div>
+                                        <button type="button" class="btn btn-icon btn-warning" data-bs-toggle="modal" data-bs-target="#edit_file_page">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 d-flex justify-content-end">
+                                <a href="javascript:void(0);">
+                                    <div>
+                                        <button type="button" class="btn btn-icon btn-danger" data-bs-toggle="modal" data-bs-target="#delete_file">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row m-0 d-flex justify-content-center">   
+                            <div class="col-6 d-flex justify-content-center p-4">   
+                                <i class="fa fa-file fa-lg"></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="file-name text-center">
+                                <p class="">{{file.file_name}}</p>
+                            </div>
+                        </div>
+                        <div class="row d-flex justift-content-end">
+                            <small>Created On: <span class="date text-muted">{{file.file_date}}</span></small>
+                        </div>
+                    </div>
+                </div>  
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Full screen modal -->
+<div class="modal fade" id="create_file_page" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="create_file_page" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Create
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="edit_file_page" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="edit_file_page" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Edit
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="delete_file" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="delete_file" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-danger">
+            <div class="modal-header bg-danger">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Delete
+            </div>
+            <!-- <div class="modal-footer bg-danger">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+{% endblock widgets %}

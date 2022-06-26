@@ -1,0 +1,12 @@
+.file_icon icon{
+    font-size: 25px !important;
+    text-align: center;
+    max-height: 180px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: top
+}
+
+.file_name{
+    font-size: 8px !important;
+}
