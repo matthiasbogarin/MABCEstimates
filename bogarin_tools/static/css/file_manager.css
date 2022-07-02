@@ -10,3 +10,13 @@
 .file_name{
     font-size: 8px !important;
 }
+
+embed {
+    width: 45vw;
+    height: 90vh;
+}
+  
+#pdf-container {
+    width: 100%;
+    height: 100%;
+}

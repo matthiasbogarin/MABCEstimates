@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link href="../../../static/buy_tool/assets/css/new_io.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+    <div class="overallContainer">
+        <div class="subContainer">
+            <!-- Top Header Containing Flight Dates and Logo -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="text-center">
+                        <span class="text-default-d3 font-weight-bold" style="font-size:16pt">Estimate</span><br>
+                        <h6>hello world</h6>
+                    </div>
+                    <div class="float-right">
+                        <!-- <img src="../../../static/buy_tool/assets/images/io_images/bmg.jpg" class="bmgLogo"> -->
+                    </div>
+                </div>
+            </div>
+            <!-- END -->
+            <hr/>
+            <!-- Information Related to Campaign -->
+            <div class="stationInfoContainer">
+                <!-- LEFT HALF -->
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>    
+                            </tr>
+                        </thead>
+                        <tbody class="stationInfoPadding text-nowrap">
+                            <tr>
+                                <th scope="row">Media:</th>
+                                <td>{{campaignInfo[0][0]}}</td>
+                                <td>{{campaignInfo[0][1]}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Client:</th>
+                                <td>{{campaignInfo[1][0]}}</td>
+                                <td>{{campaignInfo[1][1]}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Product:</th>
+                                <td>{{campaignInfo[2][0]}}</td>
+                                <td>{{campaignInfo[2][1]}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Campaign:</th>
+                                <td>{{campaignInfo[3][0]}}</td>
+                                <td>{{campaignInfo[3][1]}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Access:</th>
+                                <td>{{campaignInfo[4]}}</td>
+                                <td>{{campaignInfo[4][0]}}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Market:</th>
+                                <td>{{campaignInfo[5]}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+                {% if guaranteed %}
+                <div style="margin-left:-150px !important">
+                    <img src="../../../static/buy_tool/assets/images/io_images/guaranteed.png" style="width:175px;height:125px;">
+                </div>
+                {% endif %}
+                <!-- RIGHT HALF -->
+                <div class="ml-auto mr-4 pageInfoPadding">
+                    <p><b>Date:</b> {{flightDates[1]}}</p>
+                    <p><b>Page:</b> 1</p>
+                    <p><b>Cost:</b> Station Gross</p>
+                </div>
+            </div>
+            <!-- END -->
+
+            <!--DISCLAIMER SECTION-->
+            <footer class="disclaimerTopContainer text-center p-3">
+                <div class="disclaimerContainer">
+                    <p style="font-size: 9pt;">
+                        
+                    </p>
+                </div>
+            </footer>
+            <!--END-->
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
+
